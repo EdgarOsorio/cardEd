@@ -1,4 +1,4 @@
-:root{
+    :root {
     --btnColor: #33C8DE;
     --backHead: #91DEE8;
     --grayOpacy: #e1e1e1;
@@ -11,122 +11,203 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
-  *, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
+
 /* GLOBAL */
+
 img {
     max-width: 100%;
 }
-h1, h2, h3, h4 {
-    font-family: 'PT Sans',sans-serif;
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'PT Sans', sans-serif;
 }
+
 h1 {
     font-size: 2.8rem;
 }
+
 h2 {
     font-size: 2.5rem;
     line-height: 1.2;
 }
+
 h3 {
     font-size: 1.8rem;
-} 
+}
+
 h4 {
     font-size: 1.3rem;
 }
+
 a {
     text-decoration: none;
     font-size: 1.8rem;
 }
+
 a:hover {
     text-decoration: none;
 }
+
 .text-center {
     text-align: center;
 }
 
+
 /* BODY */
-body{
-    background: rgb(116,149,217);
-    background: radial-gradient(circle, rgba(116,149,217,1) 0%, rgba(148,230,233,1) 100%);
+
+body {
+    background: #ffffff;
     font-size: 1.6rem;
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     line-height: 2;
+
 }
+
+
 /* CONTAINER */
+
 .container {
     width: 80rem;
     height: 50rem;
     margin: 10rem auto;
     padding: 0;
     border-radius: .5rem;
-    -webkit-box-shadow: 0px 6px 25px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 25px -9px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 25px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 25px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 25px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 25px -9px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
 }
-.back{
+
+@media (max-width: 360px) {
+    .container {
+        border-radius: 0!important;
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.back {
     max-width: 100%;
     height: 20rem;
     background-color: var(--backHead);
     border-radius: .5rem 0.5rem 50% 50%;
-    -webkit-box-shadow: 0px 6px 25px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 25px -9px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 25px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 25px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 25px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 25px -9px rgba(0, 0, 0, 0.75);
 }
+
+
 /* NAV */
+
 .nav-barr {
     padding: 1rem 1rem;
 }
+
 .nav-barr ul li {
     margin-right: 1rem;
     background-color: none;
 }
+
 .nav-barr ul li a {
     color: var(--colorText);
     padding: 0 1rem;
 }
+
 .nav-link.active {
     background-color: var(--btnColor);
 }
-.nav-link.active.show{
+
+.nav-link.active.show {
     background-color: var(--btnColor);
 }
+
 .nav-link:hover {
     background-color: var(--grayOpacy);
 }
 
+.nav-item a.nav-link.active {
+    background-color: var(--btnColor)!important;
+}
+
+.colourPallet {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 2;
+    width: 15rem;
+}
+
+div.color {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: indigo;
+}
+
+.orange {
+    background-color: orange;
+}
+
+
 /* MAIN HOME */
+
 .tab-pane {
     padding: 1rem;
 }
+
 div.photo-perfil {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 div.photo-perfil img {
     width: 20rem;
     border-radius: 50%;
-    margin-bottom: 1rem;
 }
+
 div.photo-perfil h2 {
     color: var(--colorText);
 }
+
 div.photo-perfil p {
     color: var(--colorText);
     border: 1px solid var(--grayOpacy);
     padding: 0 1rem;
 }
-div.logo{
+
+div.logo {
     width: 30rem;
     margin: 0 auto;
 }
+
 .social-network {
     display: flex;
     justify-content: center;
-    margin: 1.5rem 15rem;
+    margin: 1.2rem 15rem;
 }
+
 .social-network a {
     margin-right: 2rem;
     color: var(--white);
@@ -137,46 +218,67 @@ div.logo{
     border-radius: 100%;
     transition: .3s ease-in-out;
 }
+
 .whatsapp {
     background-color: #58E778;
 }
-.facebook{
+
+.facebook {
     background-color: #375899;
 }
-.twitter{
+
+.twitter {
     background-color: #1EA1F2;
 }
+
 .instagram {
     background-color: #EE4954;
 }
+
 .linkedin {
     background-color: #0073B0;
 }
 
+
 /* MAIN LOCATION */
-div.logo-location{
+
+div.logo-location {
     width: 30rem;
     margin: 0 auto 8rem auto;
 }
-div.location{
+
+div.location {
     display: flex;
     justify-content: space-between;
 }
-div.map {
-    width: 50rem;
-    height: 20rem;
-    border: 1px solid var(--grayOpacy);
-    margin: 0 1rem 0 3rem;
+
+iframe {
+    height: 21rem;
 }
+
+div.contact-location {
+    border: 1px solid var(--grayOpacy);
+    border-radius: .5rem;
+    width: 55rem;
+    height: 24.8rem;
+    margin-right: 1rem;
+    padding: 1rem 1rem 0;
+    overflow: auto;
+}
+
 div.contact-detail p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3rem;
     color: var(--colorText);
 }
+
 div.contact-detail p a {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3rem;
+    color: var(--colorText);
+    padding: 0;
 }
+
 .bg-red {
     border-radius: 10rem;
     background-color: #ED5441;
@@ -187,6 +289,7 @@ div.contact-detail p a {
     color: var(--white);
     margin-right: 1rem;
 }
+
 .bg-green {
     border-radius: 10rem;
     background-color: #51D466;
@@ -197,6 +300,7 @@ div.contact-detail p a {
     color: var(--white);
     margin-right: 1rem;
 }
+
 .bg-blue {
     border-radius: 10rem;
     background-color: var(--btnColor);
@@ -207,6 +311,7 @@ div.contact-detail p a {
     color: var(--white);
     margin-right: 1rem;
 }
+
 .bg-yellow {
     border-radius: 10rem;
     background-color: #F0C753;
@@ -218,17 +323,26 @@ div.contact-detail p a {
     margin-right: 1rem;
 }
 
+
 /* MAIN CONTACT */
+
+#contact {
+    overflow: auto;
+}
+
 .logo-contact {
     width: 30rem;
     margin: 0 auto 5rem auto;
 }
+
 .contact-form {
     padding: 0 12.5rem;
 }
+
 .color {
     color: var(--colorText);
 }
+
 div.form-group textarea {
     width: 100%;
     row-gap: 5;
@@ -248,16 +362,22 @@ div.form-group input {
     padding: 0.5rem 1rem;
     border-radius: .5rem;
 }
+
 div.ok {
     display: flex;
     justify-content: space-around;
 }
+
 div.ok button,
 div.ok a {
-    padding: .5rem 2rem;
-    background-color: var(--backHead);
-    color: var(--white);
+    padding: 0 1rem;
     border: none;
-    line-height: 3rem;
-    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
 }
+
+div.ok button,
+a:hover {
+    transition: .3s ease-in-out;
+    color: var(--white);
